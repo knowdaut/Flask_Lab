@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/app.css')}}">
+    <title>about</title>
+  </head>
+  <body>
+    {% extends "template.html" %}
+    {% block content %}
+    
+    <header class="jumbotron text-center bg-info text-white" style="margin-bottom: 0">
+      <h1>About</h1><h1 class="text-dark">{{aboutName}}</h1>
+      <p>Welcome to my Website!</p> 
+    </header>
+    <main class="jumbotron bg-info text-white"" style="margin-bottom: 0">
+      <div class="row">
+        <div class="col-lg-4 bg-info text-white">
+          <h1 class="text-dark">Nicholas Daut</h1>
+          <h2 class="text-success">A very brief History:</h2>
+          <p>I joined the military straight out of High School. I was in for 6 years 9 months exactly. After I separated, I went back home and started College. Got a job at a Gun Shop but then covid struck and unfortunately I was let go. I actually can't stand sitting in a desk (i know im getting a CS degree) so I decided instead of school during the summer I would take a break and get a better job. From there I reached out to a friend and got a job as a Security out in Kabul Afghanistan. We all know what is currently happening there and luckily I made it home. Just 2 weeks before the new semester began. So far its going great. </p>
+        </div>
+        <div class="col-lg-4 text-center bg-info text-white">
+          <h1 class="text-dark">Work Experience</h1>
+          <dl>
+            <dt><h3 class="text-success">Aegis Defense / Guardian Angel</h3></dt>
+            <dd>- BDOC Operator</dd>
+            <dd>- Egon Drone Defense Operator</dd>
+            <dd>- Guardian Angel Qualified</dd>
+            <dd>- M4 / P320 Expert Qualified</dd>
+            <dt><h3 class="text-success">US Navy Tactical Crewman / CSAR</h3></dt>
+            <dd>- Logged over 1000 flight hours in the H60S/H/F</dd>
+            <dd>- Conducted Helicopter Intelligence, Surveillance, and Reconnaissance</dd>
+            <dd>- Qualified Door Gunner and Helicopter Rope Suspension Training Master</dd>
+            <dd>- Expert in Gau-21 and M240D weapon systems for Crew Served Weapons</dd>
+            <dt><h3 class="text-success">US Navy Crew Cheif</h3></dt>
+            <dd>- Managed and Tracked 264 Qualifications for enlisted Trainies</dd>
+            <dd>- Expert in SHARP Computer System</dd>
+            <dd>- Managed and Created Flight Schedule for entire Command</dd>
+          </dl>
+          
+        </div>
+        <div align="center" class="col-lg-4 bg-info text-white">
+          <h1 class="text-dark">Skills</h1>
+          <dl>
+            <dd>- Leadership</dd>
+            <dd>- Adaptable / Flexible</dd>
+            <dd>- Intelligence Expperience</dd>
+            <dd>- Special Operations</dd>
+            <dd>- Linux with Ubuntu</dd>
+            <dd>- Computer Science</dd>
+            <dd>- System Administration</dd>
+
+          </dl>
+        </div>
+      </div>
+    </main>
+    <footer class="jumbotron bg-info text-white" style="margin-bottom: 0">
+        <div class="row">
+            <div class="col-lg-12 text-white">
+                <p>Nicholas Daut</p>
+                <p id="date"></p>
+            
+                <script>
+                  var d = new Date();
+                  document.getElementById("date").innerHTML = d;
+                </script>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
+</html>
